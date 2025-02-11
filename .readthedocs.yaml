@@ -31,3 +31,6 @@ sphinx:
 python:
   install:
     - requirements: docs/requirements.txt
+
+extra_javascript:
+  - js/gurubase-widget.js
