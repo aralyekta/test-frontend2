@@ -22,6 +22,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # HTML output options
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_js_files = [
+    'gurubase-widget.js',
+]
 
 # If true, `todo` and `todoList` produce output
 todo_include_todos = True 
