@@ -1,4 +1,6 @@
+console.log('gurubase-widget.js loaded');
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded');
     // Customize widget settings
     const widgetSettings = {
         widgetId: "4xFPlyxyLkeHYhrm0KaGWlU7V1WFGJa0f6CDrmEPofk", // Replace with your widget ID
@@ -10,14 +12,25 @@ document.addEventListener('DOMContentLoaded', function() {
         name: "adaptix" // Optional - Widget name
     };
 
+    console.log('Widget settings:', widgetSettings);
+
     // Load the GuruBase widget
     const guruScript = document.createElement("script");
-    guruScript.src = "https://87fd-31-223-44-215.ngrok-free.app/src/widget.js";
+    guruScript.src = "https://widget.gurubase.io/widget.latest.min.js";
     guruScript.defer = true;
     guruScript.id = "guru-widget-id";
 
+    // Add error handling
+    guruScript.onerror = function(error) {
+        console.error('Failed to load GuruBase widget script:', error);
+    };
+
+    guruScript.onload = function() {
+        console.log('GuruBase widget script loaded successfully');
+    };
+
     // Add widget settings as data attributes
-    Object.entries({
+    const attributes = {
         "data-widget-id": widgetSettings.widgetId,
         "data-text": widgetSettings.text,
         "data-margins": JSON.stringify(widgetSettings.margins),
@@ -25,10 +38,18 @@ document.addEventListener('DOMContentLoaded', function() {
         "data-bg-color": widgetSettings.bgColor,
         "data-icon-url": widgetSettings.iconUrl,
         "data-name": widgetSettings.name
-    }).forEach(([key, value]) => {
-        guruScript.setAttribute(key, value);
+    };
+    
+    console.log('Setting attributes:', attributes);
+
+    Object.entries(attributes).forEach(([key, value]) => {
+        if (value !== undefined) {
+            guruScript.setAttribute(key, value);
+            console.log(`Set attribute ${key}:`, value);
+        }
     });
 
     // Append the script to the document
     document.body.appendChild(guruScript);
+    console.log('Script appended to document body');
 });
