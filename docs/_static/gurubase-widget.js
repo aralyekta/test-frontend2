@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load the GuruBase widget
     const guruScript = document.createElement("script");
-    guruScript.src = "https://cdn.jsdelivr.net/gh/Gurubase/gurubase-widget@23fbe83f24e549aba1e272af1d5e6a327d345331/src/widget.js"
+    guruScript.src = "https://cdn.jsdelivr.net/gh/Gurubase/gurubase-widget@c624234410fe93ee5bf39b1795fa68768097ec92/src/widget.js"
     guruScript.defer = true;
     guruScript.id = "guru-widget-id";
 
