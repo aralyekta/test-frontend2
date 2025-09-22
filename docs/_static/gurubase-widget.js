@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
         margins: { bottom: "20px", right: "20px" }, // Optional
         lightMode: false, // Optional - Force light mode
         // bgColor: "YOUR_BG_COLOR", // Optional - Widget background color
-        iconUrl: "https://raw.githubusercontent.com/reagento/adaptix/refs/heads/main/docs/logo/adaptix-dark.svg", // Optional - Widget icon URL
-        name: "adaptix" // Optional - Widget name
+        // iconUrl: "https://raw.githubusercontent.com/reagento/adaptix/refs/heads/main/docs/logo/adaptix-dark.svg", // Optional - Widget icon URL
+        // name: "adaptix" // Optional - Widget name
     };
 
     console.log('Widget settings:', widgetSettings);
 
     // Load the GuruBase widget
     const guruScript = document.createElement("script");
-    guruScript.src = "https://cdn.jsdelivr.net/gh/Gurubase/gurubase-widget@e412f88a0b132ef943cf584125741405008ab9e6/src/widget.js"
+    guruScript.src = "https://cdn.jsdelivr.net/gh/Gurubase/gurubase-widget@79bde943655cec2094688da1aa905a4d6aa589c4/src/widget.js"
     guruScript.defer = true;
     guruScript.id = "guru-widget-id";
 
