@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded');
     // Customize widget settings
     const widgetSettings = {
-        widgetId: "mdYuaH1S-RP7H9skeWTdPsVtUc4hU4koj9gxrKy_Ffc	", // Replace with your widget ID
+        widgetId: "mdYuaH1S-RP7H9skeWTdPsVtUc4hU4koj9gxrKy_Ffc", // Replace with your widget ID
         text: "Ask AI", // Optional - Button text
         margins: { bottom: "20px", right: "20px" }, // Optional
         lightMode: false, // Optional - Force light mode
